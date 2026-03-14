@@ -8,27 +8,34 @@
 - Ratatui 0.26 (兼容 rustc 1.87)
 - Crossterm 0.27
 
-## 开发阶段
+## 已完成功能
+- [x] 节点列表查看 (peer list)
+- [x] 节点信息查看 (node)
+- [x] 路由信息查看 (route)
+- [x] 服务控制 (启动/停止)
+- [x] 带宽统计 (stats show)
+- [x] 网络诊断 (JSON 输出，AI 友好)
+- [x] 多网络切换
+- [x] 关于/帮助页面
+- [x] 配置文件支持 (~/.easytier-tui.conf)
+- [x] 环境变量支持 (EASYTIER_CLI)
 
-### Phase 1: 基础框架
-- [x] 项目初始化
-- [x] 基础 TUI 布局
-- [ ] 菜单导航 (上下键选择)
-- [ ] 输入处理
+## 快捷键
+- ↑↓ - 上下选择
+- Enter - 确认
+- Esc - 返回
+- r - 刷新数据
+- q - 退出
+- s - 启动服务 (服务控制页)
+- x - 停止服务 (服务控制页)
 
-### Phase 2: 核心功能
-- [ ] 调用 easytier-cli 获取信息
-- [ ] 网络列表展示
-- [ ] 节点状态展示
+## 配置文件
+位置: `~/.easytier-tui.conf`
 
-### Phase 3: 服务管理
-- [ ] 服务启动/停止
-- [ ] 日志查看
-- [ ] 带宽统计
-
-### Phase 4: 高级功能
-- [ ] AI 接口 (JSON 输出)
-- [ ] 多网络支持
+```toml
+cli_path = "/usr/local/bin/easytier-cli"
+rpc_portal = "127.0.0.1:15888"
+```
 
 ## 关键命令
 
@@ -44,5 +51,4 @@ cargo clean
 ```
 
 ## 依赖
-- easytier-core
-- easytier-cli
+- easytier-cli (需安装 EasyTier)
